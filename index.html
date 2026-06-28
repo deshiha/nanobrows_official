@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nano Brows Chennai | Premium Beauty & Aesthetic Treatments</title>
+<link rel="icon" type="image/png" href="logo.jpeg">
+<meta name="description" content="Nano Brows Chennai — premium beauty and aesthetic treatments including Nano Brows, Lip Pigmentation, Eyelash Extensions, Hydra Facial, Hair Extensions, IV Therapy and more. Book your appointment today." />
+<meta name="keywords" content="Nano Brows Chennai, eyebrow microblading Chennai, lip pigmentation, eyelash extensions, hydra facial Chennai, beauty salon Chennai" />
+<meta property="og:title" content="Nano Brows Chennai | Premium Beauty & Aesthetic Treatments" />
+<meta property="og:description" content="Enhance your natural beauty with confidence. Premium beauty and aesthetic treatments in Chennai." />
+<meta name="robots" content="index, follow" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"></script>
+<script>
+  // Tailwind CDN (JIT runtime) — using the play CDN for full utility support
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          navy: '#0F172A',
+          royal: '#1E3A8A',
+          accent: '#2563EB',
+          ink: '#111827',
+          mist: '#F8FAFC',
+          line: '#E5E7EB',
+        },
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+        },
+        boxShadow: {
+          card: '0 4px 24px -4px rgba(15, 23, 42, 0.08)',
+          cardHover: '0 16px 40px -8px rgba(15, 23, 42, 0.14)',
+        }
+      }
+    }
+  }
+</script>
+<style>
+  :root{
+    --navy:#0F172A;
+    --royal:#1E3A8A;
+    --accent:#2563EB;
+    --ink:#111827;
+    --mist:#F8FAFC;
+    --line:#E5E7EB;
+  }
+  *{ box-sizing:border-box; }
+  html{ scroll-behavior:smooth; }
+  body{
+    font-family:'Inter', sans-serif;
+    color:var(--ink);
+    background:#FFFFFF;
+    overflow-x:hidden;
+  }
+  ::selection{ background:var(--accent); color:#fff; }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar{ width:8px; }
+  ::-webkit-scrollbar-track{ background:#F1F5F9; }
+  ::-webkit-scrollbar-thumb{ background:var(--royal); border-radius:8px; }
+
+  /* Loading screen */
+  #loader{
+    position:fixed; inset:0; z-index:9999;
+    background:#FFFFFF;
+    display:flex; align-items:center; justify-content:center;
+    transition:opacity 0.6s ease, visibility 0.6s ease;
+  }
+  #loader.hide{ opacity:0; visibility:hidden; }
+  .loader-mark{
+    font-weight:800; font-size:1.9rem; letter-spacing:-0.02em;
+    color:var(--navy);
+    display:flex; flex-direction:column; align-items:center; gap:14px;
+  }
+  .loader-ring{
+    width:46px; height:46px; border-radius:50%;
+    border:2.5px solid var(--line);
+    border-top-color:var(--accent);
+    animation:spin 0.9s linear infinite;
+  }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+
+  /* Reveal animations */
+  .reveal{
+    opacity:0; transform:translateY(28px);
+    transition:opacity 0.8s cubic-bezier(.22,.61,.36,1), transform 0.8s cubic-bezier(.22,.61,.36,1);
+  }
+  .reveal.in{ opacity:1; transform:translateY(0); }
+  .reveal-delay-1{ transition-delay:0.08s; }
+  .reveal-delay-2{ transition-delay:0.16s; }
+  .reveal-delay-3{ transition-delay:0.24s; }
+  .reveal-delay-4{ transition-delay:0.32s; }
+
+  .fade-in{
+    animation:fadeIn 1s ease forwards;
+  }
+  @keyframes fadeIn{ from{opacity:0;} to{opacity:1;} }
+
+  /* Navbar */
+  #navbar{
+    transition:background-color 0.35s ease, box-shadow 0.35s ease, padding 0.35s ease;
+    background:rgba(255,255,255,0);
+  }
+  #navbar.scrolled{
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(12px);
+    box-shadow:0 1px 0 var(--line), 0 8px 24px -12px rgba(15,23,42,0.12);
+  }
+  .nav-link{
+    position:relative;
+    color:var(--ink);
+  }
+  .nav-link::after{
+    content:'';
+    position:absolute; left:0; bottom:-6px;
+    width:0%; height:2px; background:var(--accent);
+    transition:width 0.3s ease;
+  }
+  .nav-link:hover::after{ width:100%; }
+
+  /* Buttons */
+  .btn-primary{
+    background:var(--navy);
+    color:#fff;
+    transition:transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+  }
+  .btn-primary:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 28px -8px rgba(15,23,42,0.45);
+    background:var(--royal);
+  }
+  .btn-secondary{
+    background:#fff;
+    color:var(--navy);
+    border:1.5px solid var(--line);
+    transition:transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  }
+  .btn-secondary:hover{
+    transform:translateY(-2px);
+    border-color:var(--accent);
+    box-shadow:0 12px 28px -10px rgba(15,23,42,0.18);
+  }
+  .btn-outline-light{
+    background:rgba(255,255,255,0.08);
+    color:#fff;
+    border:1.5px solid rgba(255,255,255,0.4);
+    transition:all 0.25s ease;
+  }
+  .btn-outline-light:hover{
+    background:#fff; color:var(--navy);
+    transform:translateY(-2px);
+  }
+
+  .btn-loading .btn-label{ opacity:0; }
+  .btn-loading .btn-spinner{ display:inline-flex !important; }
+  .btn-spinner{ display:none; }
+
+  /* Floating shapes */
+  .floating-shape{
+    position:absolute;
+    border-radius:9999px;
+    filter:blur(2px);
+    animation:float 9s ease-in-out infinite;
+    pointer-events:none;
+  }
+  @keyframes float{
+    0%,100%{ transform:translateY(0) translateX(0); }
+    50%{ transform:translateY(-22px) translateX(10px); }
+  }
+
+  /* Service cards */
+  .service-card{
+    background:#fff;
+    border:1px solid var(--line);
+    transition:transform 0.35s cubic-bezier(.22,.61,.36,1), box-shadow 0.35s ease, border-color 0.35s ease;
+  }
+  .service-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 44px -12px rgba(15,23,42,0.16);
+    border-color:#CBD5E1;
+  }
+  .service-icon-wrap{
+    transition:transform 0.35s ease, background-color 0.35s ease;
+  }
+  .service-card:hover .service-icon-wrap{
+    background:var(--navy);
+    transform:scale(1.08) rotate(-4deg);
+  }
+  .service-card:hover .service-icon-wrap svg{
+    stroke:#fff;
+  }
+
+  /* Feature cards */
+  .feature-card{
+    background:#fff;
+    border:1px solid var(--line);
+    transition:transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .feature-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 16px 36px -10px rgba(15,23,42,0.12);
+  }
+
+  /* Testimonial carousel */
+  .testimonial-track{
+    display:flex;
+    transition:transform 0.6s cubic-bezier(.22,.61,.36,1);
+  }
+  .testimonial-slide{
+    min-width:100%;
+  }
+  @media(min-width:768px){
+    .testimonial-slide{ min-width:50%; }
+  }
+  @media(min-width:1024px){
+    .testimonial-slide{ min-width:33.3333%; }
+  }
+  .dot{
+    width:8px; height:8px; border-radius:50%;
+    background:var(--line);
+    transition:all 0.3s ease;
+    cursor:pointer;
+  }
+  .dot.active{
+    background:var(--accent);
+    width:22px; border-radius:5px;
+  }
+
+  /* Sticky mobile bar */
+  #stickyBar{
+    box-shadow:0 -8px 24px -8px rgba(15,23,42,0.18);
+  }
+
+  /* Section badge / eyebrow */
+  .eyebrow{
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    font-size:0.75rem;
+    font-weight:600;
+    color:var(--accent);
+  }
+
+  /* Input focus */
+  .form-input:focus, .form-select:focus, .form-textarea:focus{
+    outline:none;
+    border-color:var(--accent);
+    box-shadow:0 0 0 3px rgba(37,99,235,0.12);
+  }
+
+  /* Toast */
+  #toast{
+    position:fixed; bottom:24px; left:50%; transform:translateX(-50%) translateY(20px);
+    background:var(--navy); color:#fff;
+    padding:14px 22px; border-radius:12px;
+    font-size:0.9rem; font-weight:500;
+    box-shadow:0 12px 32px -8px rgba(15,23,42,0.4);
+    opacity:0; visibility:hidden;
+    transition:all 0.35s ease;
+    z-index:200; max-width:90vw; text-align:center;
+  }
+  #toast.show{
+    opacity:1; visibility:visible; transform:translateX(-50%) translateY(0);
+  }
+
+  @media (max-width:767px){
+    #stickyBar{ display:flex; }
+    body{ padding-bottom:72px; }
+  }
+  @media (min-width:768px){
+    #stickyBar{ display:none; }
+    body{ padding-bottom:0; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; }
+  }
+
+  a, button{ cursor:pointer; }
+  .focus-ring:focus-visible{
+    outline:2px solid var(--accent);
+    outline-offset:2px;
+  }
+</style>
+</head>
+<body class="antialiased bg-white">
+
+<!-- ============ LOADING SCREEN ============ -->
+<div id="loader" aria-hidden="true">
+  <div class="loader-mark">
+    <img src="logo.jpeg" alt="Nano Brows Chennai Logo" class="h-16 w-16 object-contain fade-in" />
+    <div class="loader-ring"></div>
+  </div>
+</div>
+
+<!-- ============ TOAST ============ -->
+<div id="toast" role="status"></div>
+
+<!-- ============ NAVBAR ============ -->
+<nav id="navbar" class="fixed top-0 left-0 w-full z-50 py-4">
+  <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+    <a href="#home" class="flex items-center gap-2.5">
+      <img src="logo.jpeg" alt="Nano Brows Chennai Logo" class="h-11 w-11 object-contain" />
+      <span class="hidden sm:flex flex-col leading-none">
+        <span class="text-base font-extrabold tracking-tight text-navy">NANO BROWS</span>
+        <span class="text-[10px] font-medium text-gray-500 tracking-wide">CHENNAI</span>
+      </span>
+    </a>
+    <div class="hidden md:flex items-center gap-9 text-sm font-medium">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#why-us" class="nav-link">Why Choose Us</a>
+      <a href="#testimonials" class="nav-link">Testimonials</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <a href="#contact" class="hidden md:inline-flex btn-primary px-5 py-2.5 rounded-full text-sm font-semibold focus-ring">
+      Book Appointment
+    </a>
+    <button id="menuBtn" aria-label="Open menu" class="md:hidden text-navy focus-ring rounded">
+      <svg id="iconMenu" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-line mt-3">
+    <div class="flex flex-col px-6 py-4 gap-4 text-sm font-medium">
+      <a href="#home" class="mobile-link">Home</a>
+      <a href="#about" class="mobile-link">About</a>
+      <a href="#services" class="mobile-link">Services</a>
+      <a href="#why-us" class="mobile-link">Why Choose Us</a>
+      <a href="#testimonials" class="mobile-link">Testimonials</a>
+      <a href="#contact" class="mobile-link">Contact</a>
+      <a href="#contact" class="btn-primary text-center px-5 py-3 rounded-full font-semibold mt-1">Book Appointment</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden bg-white">
+  <!-- Floating shapes -->
+  <div class="floating-shape" style="top:12%; left:6%; width:90px; height:90px; background:rgba(37,99,235,0.08);"></div>
+  <div class="floating-shape" style="top:65%; left:14%; width:50px; height:50px; background:rgba(30,58,138,0.10); animation-delay:1.2s;"></div>
+  <div class="floating-shape" style="top:22%; right:8%; width:130px; height:130px; background:rgba(37,99,235,0.06); animation-delay:0.6s;"></div>
+  <div class="floating-shape" style="top:74%; right:16%; width:64px; height:64px; background:rgba(15,23,42,0.06); animation-delay:1.8s;"></div>
+
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative z-10 w-full">
+    <div class="reveal in">
+      <span class="eyebrow">Premium Beauty Studio · Chennai</span>
+      <h1 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.08] text-navy">
+        Enhance Your Natural Beauty With Confidence
+      </h1>
+      <p class="mt-6 text-lg text-gray-600 max-w-lg leading-relaxed">
+        Premium Beauty & Aesthetic Treatments In Chennai
+      </p>
+      <div class="mt-9 flex flex-wrap gap-4">
+        <a href="https://instagram.com/nanobrows_chennai" target="_blank" rel="noopener noreferrer"
+           class="book-now-btn btn-primary inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-sm focus-ring">
+          <span class="btn-label flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.85.06 1.17.06 1.96.24 2.43.4a4.92 4.92 0 0 1 1.77 1.15 4.92 4.92 0 0 1 1.15 1.77c.17.47.35 1.26.4 2.43.06 1.25.06 1.65.06 4.85s0 3.6-.06 4.85c-.06 1.17-.24 1.96-.4 2.43a4.92 4.92 0 0 1-1.15 1.77 4.92 4.92 0 0 1-1.77 1.15c-.47.17-1.26.35-2.43.4-1.25.06-1.65.06-4.85.06s-3.6 0-4.85-.06c-1.17-.06-1.96-.24-2.43-.4a4.92 4.92 0 0 1-1.77-1.15 4.92 4.92 0 0 1-1.15-1.77c-.17-.47-.35-1.26-.4-2.43C2.2 15.6 2.2 15.2 2.2 12s0-3.6.06-4.85c.06-1.17.24-1.96.4-2.43A4.92 4.92 0 0 1 3.81 3 4.92 4.92 0 0 1 5.58 1.84c.47-.17 1.26-.35 2.43-.4C9.26 1.38 9.66 1.38 12 1.38m0 1.8c-3.15 0-3.52 0-4.76.06-.96.05-1.48.2-1.83.34-.46.18-.79.39-1.13.74-.35.34-.56.67-.74 1.13-.13.35-.29.87-.34 1.83C3.14 8.16 3.14 8.53 3.14 12s0 3.84.06 5.08c.05.96.2 1.48.34 1.83.18.46.39.79.74 1.13.34.35.67.56 1.13.74.35.13.87.29 1.83.34 1.24.06 1.61.06 4.76.06s3.52 0 4.76-.06c.96-.05 1.48-.2 1.83-.34.46-.18.79-.39 1.13-.74.35-.34.56-.67.74-1.13.13-.35.29-.87.34-1.83.06-1.24.06-1.61.06-5.08s0-3.84-.06-5.08c-.05-.96-.2-1.48-.34-1.83a3.02 3.02 0 0 0-.74-1.13 3.02 3.02 0 0 0-1.13-.74c-.35-.13-.87-.29-1.83-.34C15.84 4 15.47 4 12.32 4Zm0 4.6a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8Zm0 1.8a3.6 3.6 0 1 0 0 7.2 3.6 3.6 0 0 0 0-7.2Zm5.9-3.05a1.26 1.26 0 1 1-2.52 0 1.26 1.26 0 0 1 2.52 0Z"/></svg>
+            Book Appointment
+          </span>
+          <svg class="btn-spinner h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2.5" stroke-opacity="0.3"/><path d="M21 12a9 9 0 0 0-9-9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+        </a>
+        <a href="tel:+919791079574" class="btn-secondary inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-sm focus-ring">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.4 21 3 13.6 3 4.5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.02l-2.2 2.2Z"/></svg>
+          Call Now
+        </a>
+        <a href="https://wa.me/919791079574" target="_blank" rel="noopener noreferrer" class="btn-secondary inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-sm focus-ring">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.47 3.45 1.35 4.93L2 22l5.27-1.38a9.9 9.9 0 0 0 4.77 1.22h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2Zm0 18.2h-.01a8.2 8.2 0 0 1-4.18-1.15l-.3-.18-3.12.82.84-3.04-.2-.31a8.18 8.18 0 0 1-1.26-4.38c0-4.53 3.69-8.22 8.24-8.22 2.2 0 4.27.86 5.82 2.42a8.17 8.17 0 0 1 2.41 5.82c0 4.54-3.7 8.22-8.24 8.22Zm4.52-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.24-.64.81-.78.97-.15.17-.29.18-.54.06-.25-.12-1.05-.39-2-1.23a7.5 7.5 0 0 1-1.39-1.72c-.15-.25-.02-.39.11-.52.13-.13.3-.34.45-.5.15-.17.2-.29.3-.48.1-.2.05-.36-.02-.5-.08-.13-.7-1.68-.96-2.3-.25-.6-.5-.51-.7-.52-.18-.01-.39-.01-.6-.01-.2 0-.53.07-.81.37-.28.3-1.07 1.05-1.07 2.55s1.1 2.96 1.25 3.16c.15.2 2.1 3.2 5.1 4.36 3 1.16 3 .78 3.55.73.54-.05 1.74-.71 1.99-1.4.24-.69.24-1.28.17-1.4-.07-.12-.25-.19-.5-.31Z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+      <div class="mt-10 flex items-center gap-8 text-gray-500 text-sm">
+        <div><span class="block text-2xl font-extrabold text-navy">2+ Yrs</span>Results That Last</div>
+        <div class="w-px h-9 bg-line"></div>
+        <div><span class="block text-2xl font-extrabold text-navy">10+</span>Premium Treatments</div>
+        <div class="w-px h-9 bg-line"></div>
+        <div><span class="block text-2xl font-extrabold text-navy">Chennai</span>Trusted Studio</div>
+      </div>
+    </div>
+
+    <div class="reveal reveal-delay-2 in relative">
+      <div class="relative rounded-3xl overflow-hidden shadow-card aspect-[4/5]">
+        <img src="hero-image.jpeg"
+             alt="Beauty Specialist" loading="eager"
+             class="w-full h-full object-cover">
+      </div>
+      <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-card px-6 py-4 hidden sm:flex items-center gap-3 border border-line">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9 text-accent" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div>
+          <p class="text-sm font-semibold text-navy">Certified Specialists</p>
+          <p class="text-xs text-gray-500">Hygienic & Safe Process</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="py-24 lg:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+    <div class="reveal order-2 lg:order-1">
+      <div class="relative rounded-3xl overflow-hidden shadow-card aspect-[4/5] max-w-md">
+        <img src="about-studio.jpeg"
+             alt="Calm, modern beauty studio interior" loading="lazy"
+             class="w-full h-full object-cover">
+      </div>
+    </div>
+    <div class="reveal reveal-delay-1 order-1 lg:order-2">
+      <span class="eyebrow">About Us</span>
+      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-navy">About Nano Brows Chennai</h2>
+      <p class="mt-6 text-gray-600 leading-relaxed text-base">
+        At Nano Brows Chennai, we believe beauty is an expression of confidence. Our goal is to enhance your natural features using advanced beauty techniques while maintaining elegance and authenticity. Every treatment is personalized to suit individual needs, ensuring comfort, safety, and exceptional results. We use premium products, advanced technology, and professional expertise to deliver a luxurious beauty experience.
+      </p>
+      <div class="mt-8 grid grid-cols-2 gap-5">
+        <div class="flex items-start gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="text-sm text-gray-700 font-medium">Certified Professionals</span>
+        </div>
+        <div class="flex items-start gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="text-sm text-gray-700 font-medium">Premium Products</span>
+        </div>
+        <div class="flex items-start gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="text-sm text-gray-700 font-medium">Hygienic Environment</span>
+        </div>
+        <div class="flex items-start gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="text-sm text-gray-700 font-medium">Personalized Care</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section id="services" class="py-24 lg:py-32 bg-mist border-t border-line">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <span class="eyebrow">Our Services</span>
+      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-navy">Premium Treatments, Designed Around You</h2>
+      <p class="mt-4 text-gray-600">A curated range of beauty and aesthetic treatments delivered with precision, hygiene, and care.</p>
+    </div>
+
+    <div id="servicesGrid" class="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-7"></div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section id="why-us" class="py-24 lg:py-32 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <span class="eyebrow">Why Choose Us</span>
+      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-navy">Trusted Expertise, Premium Care</h2>
+    </div>
+    <div id="featuresGrid" class="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </div>
+</section>
+
+<!-- ============ OWNER ============ -->
+<section class="py-24 lg:py-32 bg-mist border-t border-y border-line">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="reveal grid md:grid-cols-[280px_1fr] gap-12 items-center bg-white rounded-3xl border border-line shadow-card p-8 md:p-12">
+      <div class="relative mx-auto">
+        <div class="rounded-2xl overflow-hidden shadow-card w-56 h-56 md:w-64 md:h-64">
+          <img src="owner-kavitha.jpeg"
+               alt="Kavitha P., Founder and Beauty Specialist at Nano Brows Chennai" loading="lazy"
+               class="w-full h-full object-cover">
+        </div>
+        <div class="absolute -bottom-4 -right-4 bg-navy text-white rounded-xl px-4 py-2 text-xs font-semibold shadow-card">
+          Founder
+        </div>
+      </div>
+      <div>
+        <span class="eyebrow">Meet The Founder</span>
+        <h3 class="mt-3 text-2xl sm:text-3xl font-extrabold text-navy tracking-tight">Kavitha P.</h3>
+        <p class="mt-1 text-accent font-semibold text-sm">Founder & Beauty Specialist</p>
+        <p class="mt-5 text-gray-600 leading-relaxed">
+          Kavitha P. is passionate about helping every client look and feel their best. With professional expertise, personalized care, and attention to detail, she delivers exceptional beauty treatments in a safe, hygienic, and welcoming environment.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section id="testimonials" class="py-24 lg:py-32 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <span class="eyebrow">Testimonials</span>
+      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-navy">What Our Clients Say</h2>
+    </div>
+  </div>
+
+  <div class="mt-14 max-w-7xl mx-auto px-6 relative">
+    <div class="overflow-hidden">
+      <div id="testimonialTrack" class="testimonial-track"></div>
+    </div>
+    <div class="flex justify-center gap-2 mt-9" id="testimonialDots"></div>
+  </div>
+</section>
+
+<!-- ============ INSTAGRAM ============ -->
+<section class="py-24 lg:py-32 bg-mist border-y border-line">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <img src="logo.jpeg" alt="Nano Brows Chennai Logo" class="h-20 w-20 object-contain mx-auto mb-6" />
+      <span class="eyebrow">@nanobrows_chennai</span>
+      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-navy">Follow Our Beauty Journey</h2>
+      <p class="mt-4 text-gray-600">Stay updated with our latest transformations, offers, and behind-the-scenes moments from the studio.</p>
+    </div>
+
+    <div class="text-center mt-10">
+      <a href="https://instagram.com/nanobrows_chennai" target="_blank" rel="noopener noreferrer"
+         class="btn-primary inline-flex items-center gap-2 px-7 py-3.5 rounded-full font-semibold text-sm focus-ring">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.85.06 1.17.06 1.96.24 2.43.4a4.92 4.92 0 0 1 1.77 1.15 4.92 4.92 0 0 1 1.15 1.77c.17.47.35 1.26.4 2.43.06 1.25.06 1.65.06 4.85s0 3.6-.06 4.85c-.06 1.17-.24 1.96-.4 2.43a4.92 4.92 0 0 1-1.15 1.77 4.92 4.92 0 0 1-1.77 1.15c-.47.17-1.26.35-2.43.4-1.25.06-1.65.06-4.85.06s-3.6 0-4.85-.06c-1.17-.06-1.96-.24-2.43-.4a4.92 4.92 0 0 1-1.77-1.15 4.92 4.92 0 0 1-1.15-1.77c-.17-.47-.35-1.26-.4-2.43C2.2 15.6 2.2 15.2 2.2 12s0-3.6.06-4.85c.06-1.17.24-1.96.4-2.43A4.92 4.92 0 0 1 3.81 3 4.92 4.92 0 0 1 5.58 1.84c.47-.17 1.26-.35 2.43-.4C9.26 1.38 9.66 1.38 12 1.38m0 1.8c-3.15 0-3.52 0-4.76.06-.96.05-1.48.2-1.83.34-.46.18-.79.39-1.13.74-.35.34-.56.67-.74 1.13-.13.35-.29.87-.34 1.83C3.14 8.16 3.14 8.53 3.14 12s0 3.84.06 5.08c.05.96.2 1.48.34 1.83.18.46.39.79.74 1.13.34.35.67.56 1.13.74.35.13.87.29 1.83.34 1.24.06 1.61.06 4.76.06s3.52 0 4.76-.06c.96-.05 1.48-.2 1.83-.34.46-.18.79-.39 1.13-.74.35-.34.56-.67.74-1.13.13-.35.29-.87.34-1.83.06-1.24.06-1.61.06-5.08s0-3.84-.06-5.08c-.05-.96-.2-1.48-.34-1.83a3.02 3.02 0 0 0-.74-1.13 3.02 3.02 0 0 0-1.13-.74c-.35-.13-.87-.29-1.83-.34C15.84 4 15.47 4 12.32 4Zm0 4.6a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8Zm0 1.8a3.6 3.6 0 1 0 0 7.2 3.6 3.6 0 0 0 0-7.2Zm5.9-3.05a1.26 1.26 0 1 1-2.52 0 1.26 1.26 0 0 1 2.52 0Z"/></svg>
+        Follow On Instagram
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="py-24 lg:py-32 bg-navy text-white relative overflow-hidden">
+  <div class="floating-shape" style="top:10%; left:4%; width:120px; height:120px; background:rgba(37,99,235,0.18);"></div>
+  <div class="floating-shape" style="bottom:8%; right:8%; width:160px; height:160px; background:rgba(30,58,138,0.25); animation-delay:1s;"></div>
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <span class="eyebrow" style="color:#93C5FD;">Get In Touch</span>
+      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-white">Book Your Beauty Transformation Today</h2>
+    </div>
+
+    <div class="mt-16 grid lg:grid-cols-2 gap-12">
+      <!-- Info -->
+      <div class="reveal space-y-7">
+        <div class="flex items-start gap-4">
+          <div class="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="9" r="2.4" stroke="currentColor" stroke-width="1.7"/></svg>
+          </div>
+          <div>
+            <p class="font-semibold">Location</p>
+            <p class="text-gray-300 text-sm mt-1">Chennai, Tamil Nadu</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.4 21 3 13.6 3 4.5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.02l-2.2 2.2Z"/></svg>
+          </div>
+          <div>
+            <p class="font-semibold">Call Us</p>
+            <a href="tel:+919791079574" class="text-gray-300 text-sm mt-1 hover:text-white transition-colors block">+91 97910 79574</a>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.85.06 1.17.06 1.96.24 2.43.4a4.92 4.92 0 0 1 1.77 1.15 4.92 4.92 0 0 1 1.15 1.77c.17.47.35 1.26.4 2.43.06 1.25.06 1.65.06 4.85s0 3.6-.06 4.85c-.06 1.17-.24 1.96-.4 2.43a4.92 4.92 0 0 1-1.15 1.77 4.92 4.92 0 0 1-1.77 1.15c-.47.17-1.26.35-2.43.4-1.25.06-1.65.06-4.85.06s-3.6 0-4.85-.06c-1.17-.06-1.96-.24-2.43-.4a4.92 4.92 0 0 1-1.77-1.15 4.92 4.92 0 0 1-1.15-1.77c-.17-.47-.35-1.26-.4-2.43C2.2 15.6 2.2 15.2 2.2 12s0-3.6.06-4.85c.06-1.17.24-1.96.4-2.43A4.92 4.92 0 0 1 3.81 3 4.92 4.92 0 0 1 5.58 1.84c.47-.17 1.26-.35 2.43-.4C9.26 1.38 9.66 1.38 12 1.38Z"/></svg>
+          </div>
+          <div>
+            <p class="font-semibold">Instagram</p>
+            <a href="https://instagram.com/nanobrows_chennai" target="_blank" rel="noopener noreferrer" class="text-gray-300 text-sm mt-1 hover:text-white transition-colors block">@nano_brows_chennai</a>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-11 h-11 rounded-xl bg-white/10 flex items-center justify-center flex-shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3.2 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          </div>
+          <div>
+            <p class="font-semibold">Business Hours</p>
+            <p class="text-gray-300 text-sm mt-1">Monday – Sunday · 10:00 AM – 8:00 PM</p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-3 pt-3">
+          <a href="tel:+919791079574" class="btn-outline-light inline-flex items-center gap-2 px-5 py-3 rounded-full text-sm font-semibold focus-ring">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.4 21 3 13.6 3 4.5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.02l-2.2 2.2Z"/></svg>
+            Call Now
+          </a>
+          <a href="https://wa.me/919791079574" target="_blank" rel="noopener noreferrer" class="btn-outline-light inline-flex items-center gap-2 px-5 py-3 rounded-full text-sm font-semibold focus-ring">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.47 3.45 1.35 4.93L2 22l5.27-1.38a9.9 9.9 0 0 0 4.77 1.22h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2Z"/></svg>
+            WhatsApp
+          </a>
+          <a href="https://instagram.com/nanobrows_chennai" target="_blank" rel="noopener noreferrer" class="btn-outline-light inline-flex items-center gap-2 px-5 py-3 rounded-full text-sm font-semibold focus-ring">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.85.06 1.17.06 1.96.24 2.43.4a4.92 4.92 0 0 1 1.77 1.15 4.92 4.92 0 0 1 1.15 1.77c.17.47.35 1.26.4 2.43.06 1.25.06 1.65.06 4.85s0 3.6-.06 4.85c-.06 1.17-.24 1.96-.4 2.43a4.92 4.92 0 0 1-1.15 1.77 4.92 4.92 0 0 1-1.77 1.15c-.47.17-1.26.35-2.43.4-1.25.06-1.65.06-4.85.06s-3.6 0-4.85-.06c-1.17-.06-1.96-.24-2.43-.4a4.92 4.92 0 0 1-1.77-1.15 4.92 4.92 0 0 1-1.15-1.77c-.17-.47-.35-1.26-.4-2.43C2.2 15.6 2.2 15.2 2.2 12s0-3.6.06-4.85c.06-1.17.24-1.96.4-2.43A4.92 4.92 0 0 1 3.81 3 4.92 4.92 0 0 1 5.58 1.84c.47-.17 1.26-.35 2.43-.4C9.26 1.38 9.66 1.38 12 1.38Z"/></svg>
+            Instagram
+          </a>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="reveal reveal-delay-1 bg-white rounded-3xl p-7 sm:p-9 text-ink shadow-card">
+        <h3 class="text-xl font-bold text-navy">Send Us A Message</h3>
+        <p class="text-sm text-gray-500 mt-1 mb-6">We'll get back to you to confirm your appointment.</p>
+        <form id="contactForm" class="space-y-4" novalidate>
+          <div>
+            <label for="fname" class="block text-sm font-medium text-gray-700 mb-1.5">Name</label>
+            <input id="fname" name="name" type="text" required placeholder="Your full name"
+                   class="form-input w-full rounded-xl border border-line px-4 py-3 text-sm transition-all" />
+          </div>
+          <div>
+            <label for="fphone" class="block text-sm font-medium text-gray-700 mb-1.5">Phone Number</label>
+            <input id="fphone" name="phone" type="tel" required placeholder="+91 XXXXX XXXXX"
+                   class="form-input w-full rounded-xl border border-line px-4 py-3 text-sm transition-all" />
+          </div>
+          <div>
+            <label for="fservice" class="block text-sm font-medium text-gray-700 mb-1.5">Service</label>
+            <select id="fservice" name="service" required
+                    class="form-select w-full rounded-xl border border-line px-4 py-3 text-sm transition-all bg-white">
+              <option value="" disabled selected>Select a service</option>
+              <option>Nano Brows</option>
+              <option>Lip Pigmentation</option>
+              <option>Eyelash Lifting & Extensions</option>
+              <option>Hydra Facial</option>
+              <option>Hair Extensions</option>
+              <option>IV Therapy</option>
+              <option>Bright Skin Serum Treatments</option>
+              <option>Tattoo Services</option>
+              <option>Tattoo Removal</option>
+              <option>Unwanted Hair Removal</option>
+            </select>
+          </div>
+          <div>
+            <label for="fmessage" class="block text-sm font-medium text-gray-700 mb-1.5">Message</label>
+            <textarea id="fmessage" name="message" rows="3" placeholder="Tell us a bit about what you're looking for"
+                      class="form-textarea w-full rounded-xl border border-line px-4 py-3 text-sm transition-all resize-none"></textarea>
+          </div>
+          <button type="submit" id="bookApptBtn" class="book-now-btn btn-primary w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm mt-2 focus-ring">
+            <span class="btn-label">Book Appointment</span>
+            <svg class="btn-spinner h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2.5" stroke-opacity="0.3"/><path d="M21 12a9 9 0 0 0-9-9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </button>
+          <p class="text-xs text-gray-400 text-center pt-1">Submitting this form will direct you to our Instagram to confirm your booking.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-navy text-gray-300 pt-16 pb-8 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-6 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <div>
+      <div class="flex items-center gap-2.5">
+        <img src="logo.jpeg" alt="Nano Brows Chennai Logo" class="h-12 w-12 object-contain" />
+        <span class="text-xl font-extrabold text-white tracking-tight">NANO BROWS</span>
+      </div>
+      <p class="text-sm text-gray-400 mt-3 leading-relaxed">Premium beauty and aesthetic treatments in Chennai — natural results, professional care.</p>
+      <div class="flex gap-3 mt-5">
+        <a href="https://instagram.com/nanobrows_chennai" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors focus-ring">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.85.06 1.17.06 1.96.24 2.43.4a4.92 4.92 0 0 1 1.77 1.15 4.92 4.92 0 0 1 1.15 1.77c.17.47.35 1.26.4 2.43.06 1.25.06 1.65.06 4.85s0 3.6-.06 4.85c-.06 1.17-.24 1.96-.4 2.43a4.92 4.92 0 0 1-1.15 1.77 4.92 4.92 0 0 1-1.77 1.15c-.47.17-1.26.35-2.43.4-1.25.06-1.65.06-4.85.06s-3.6 0-4.85-.06c-1.17-.06-1.96-.24-2.43-.4a4.92 4.92 0 0 1-1.77-1.15 4.92 4.92 0 0 1-1.15-1.77c-.17-.47-.35-1.26-.4-2.43C2.2 15.6 2.2 15.2 2.2 12s0-3.6.06-4.85c.06-1.17.24-1.96.4-2.43A4.92 4.92 0 0 1 3.81 3 4.92 4.92 0 0 1 5.58 1.84c.47-.17 1.26-.35 2.43-.4C9.26 1.38 9.66 1.38 12 1.38Z"/></svg>
+        </a>
+        <a href="https://wa.me/919791079574" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors focus-ring">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.47 3.45 1.35 4.93L2 22l5.27-1.38a9.9 9.9 0 0 0 4.77 1.22h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2Z"/></svg>
+        </a>
+        <a href="tel:+919791079574" aria-label="Call" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent transition-colors focus-ring">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.4 21 3 13.6 3 4.5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.02l-2.2 2.2Z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div>
+      <p class="text-white font-semibold mb-4 text-sm">Quick Links</p>
+      <ul class="space-y-2.5 text-sm">
+        <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
+        <li><a href="#about" class="hover:text-white transition-colors">About</a></li>
+        <li><a href="#why-us" class="hover:text-white transition-colors">Why Choose Us</a></li>
+        <li><a href="#testimonials" class="hover:text-white transition-colors">Testimonials</a></li>
+        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-white font-semibold mb-4 text-sm">Services</p>
+      <ul class="space-y-2.5 text-sm" id="footerServices"></ul>
+    </div>
+    <div>
+      <p class="text-white font-semibold mb-4 text-sm">Contact</p>
+      <ul class="space-y-2.5 text-sm">
+        <li>Chennai, Tamil Nadu</li>
+        <li><a href="tel:+919791079574" class="hover:text-white transition-colors">+91 97910 79574</a></li>
+        <li><a href="https://instagram.com/nanobrows_chennai" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">@nano_brows_chennai</a></li>
+        <li>Mon – Sun · 10AM – 8PM</li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-white/10 text-center text-xs text-gray-500">
+    © 2026 Nano Brows Chennai. All Rights Reserved.
+  </div>
+</footer>
+
+<!-- ============ STICKY MOBILE BAR ============ -->
+<div id="stickyBar" class="fixed bottom-0 left-0 w-full bg-white border-t border-line z-50">
+  <a href="tel:+919791079574" class="flex-1 flex flex-col items-center justify-center gap-0.5 py-2.5 text-navy">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.4 21 3 13.6 3 4.5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.02l-2.2 2.2Z"/></svg>
+    <span class="text-[11px] font-medium">Call</span>
+  </a>
+  <a href="https://wa.me/919791079574" target="_blank" rel="noopener noreferrer" class="flex-1 flex flex-col items-center justify-center gap-0.5 py-2.5 text-navy border-l border-r border-line">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.47 3.45 1.35 4.93L2 22l5.27-1.38a9.9 9.9 0 0 0 4.77 1.22h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2Z"/></svg>
+    <span class="text-[11px] font-medium">WhatsApp</span>
+  </a>
+  <a href="https://instagram.com/nanobrows_chennai" target="_blank" rel="noopener noreferrer" class="flex-1 flex flex-col items-center justify-center gap-0.5 py-2.5 text-navy">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.85.06 1.17.06 1.96.24 2.43.4a4.92 4.92 0 0 1 1.77 1.15 4.92 4.92 0 0 1 1.15 1.77c.17.47.35 1.26.4 2.43.06 1.25.06 1.65.06 4.85s0 3.6-.06 4.85c-.06 1.17-.24 1.96-.4 2.43a4.92 4.92 0 0 1-1.15 1.77 4.92 4.92 0 0 1-1.77 1.15c-.47.17-1.26.35-2.43.4-1.25.06-1.65.06-4.85.06s-3.6 0-4.85-.06c-1.17-.06-1.96-.24-2.43-.4a4.92 4.92 0 0 1-1.77-1.15 4.92 4.92 0 0 1-1.15-1.77c-.17-.47-.35-1.26-.4-2.43C2.2 15.6 2.2 15.2 2.2 12s0-3.6.06-4.85c.06-1.17.24-1.96.4-2.43A4.92 4.92 0 0 1 3.81 3 4.92 4.92 0 0 1 5.58 1.84c.47-.17 1.26-.35 2.43-.4C9.26 1.38 9.66 1.38 12 1.38Z"/></svg>
+    <span class="text-[11px] font-medium">Instagram</span>
+  </a>
+</div>
+
+<script>
+/* =========================================================
+   DATA
+========================================================= */
+const INSTAGRAM_URL = "https://instagram.com/nanobrows_chennai";
+const PHONE_DISPLAY = "+91 9791079574";
+
+const services = [
+  {
+    title: "Nano Brows",
+    desc: "Achieve perfectly shaped, natural-looking eyebrows using our advanced Nano Brows technique. Fine hair-like strokes blend seamlessly with your natural brows for fuller, defined, elegant eyebrows.",
+    duration: "Lasts Up To 2 Years",
+    img: "nano-brows.jpeg",
+    icon: `<path d="M3 13c2-4 6-6 9-6s7 2 9 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M5 13.5c1.6-2.6 4.2-4 7-4s5.4 1.4 7 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" opacity="0.5"/>`
+  },
+  {
+    title: "Lip Pigmentation",
+    desc: "Enhance your natural lip color and reduce dark or uneven pigmentation. Enjoy soft, youthful, naturally tinted lips without the need for daily lipstick.",
+    duration: "Lasts Up To 2 Years",
+    img: "lip.jpeg",
+    icon: `<path d="M4 13c2.5 3 5.2 4.5 8 4.5s5.5-1.5 8-4.5c-2.5-2.4-5.2-3.7-8-3.7S6.5 10.6 4 13Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>`
+  },
+  {
+    title: "Eyelash Lifting & Extensions",
+    desc: "Wake up every day with beautifully lifted, fuller, and longer lashes — brighter eyes without daily mascara.",
+    duration: "3–4 Weeks",
+    img: "eyelash.jpeg",
+    icon: `<path d="M4 14c2-5 5-7 8-7s6 2 8 7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="13.6" r="2.1" stroke="currentColor" stroke-width="1.5"/>`
+  },
+  {
+    title: "Hydra Facial",
+    desc: "A premium skin rejuvenation treatment that deeply cleanses, exfoliates, hydrates, and nourishes — leaving skin glowing and refreshed.",
+    duration: "",
+    img: "hydrafacial.jpeg",
+    icon: `<path d="M12 3c2.5 3.5 5 6.7 5 10a5 5 0 1 1-10 0c0-3.3 2.5-6.5 5-10Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>`
+  },
+  {
+    title: "Hair Extensions",
+    desc: "Instantly transform your hairstyle with premium-quality extensions that blend perfectly with your own hair for a flawless look.",
+    duration: "",
+    img: "hair-extension.jpeg",
+    icon: `<path d="M7 4c0 4 0 12 0 16M12 4c0 4 0 12 0 16M17 4c0 4 0 12 0 16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>`
+  },
+  {
+    title: "IV Therapy",
+    desc: "Boost your overall wellness with customized IV Therapy — vitamins, minerals, and antioxidants for hydration, energy, and skin health.",
+    duration: "",
+    img: "iv-therapy.jpeg",
+    icon: `<path d="M9 3h6M12 3v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M7 9h10l-1 11a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2L7 9Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>`
+  },
+  {
+    title: "Bright Skin Serum Treatments",
+    desc: "Advanced treatments designed to improve skin tone, hydration, brightness, and texture for a healthy, glowing complexion.",
+    duration: "",
+    img: "bright-serum.jpeg",
+    icon: `<path d="M12 2v4M12 18v4M4 12H2M22 12h-2M5.6 5.6 4.2 4.2M18.4 18.4l1.4 1.4M5.6 18.4l-1.4 1.4M18.4 5.6l1.4-1.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.6"/>`
+  },
+  {
+    title: "Tattoo Services",
+    desc: "Express your personality with professionally designed custom tattoos — precision, creativity, and strict hygiene standards.",
+    duration: "",
+    img: "tattoo.jpeg",
+    icon: `<path d="M14 4 6 12l2 2 8-8-2-2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M8 14l-3 5 5-3" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>`
+  },
+  {
+    title: "Tattoo Removal",
+    desc: "Advanced procedures that safely and gradually fade unwanted tattoos with minimal discomfort, for clearer skin and renewed confidence.",
+    duration: "",
+    img: "tattoo-removal.jpeg",
+    icon: `<circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.6"/><path d="M9 9l6 6M15 9l-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>`
+  },
+  {
+    title: "Unwanted Hair Removal",
+    desc: "Enjoy smooth, hair-free skin with advanced treatments — long-lasting results, reduced regrowth, and enhanced confidence.",
+    duration: "",
+    img: "hair-removal.jpeg",
+    icon: `<path d="M5 12c3-6 7-9 7-9s4 3 7 9-3 9-7 9-7-3-7-9Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>`
+  },
+];
+
+const features = [
+  { title: "Certified Beauty Professional", icon: `<path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9"/>` },
+  { title: "Premium Quality Products", icon: `<path d="M12 3l2.5 5 5.5.8-4 3.9.9 5.5L12 15.7 7.1 18.2 8 12.7 4 8.8l5.5-.8L12 3Z" stroke-linejoin="round"/>` },
+  { title: "Advanced Equipment", icon: `<rect x="4" y="7" width="16" height="11" rx="2"/><path d="M9 7V5a3 3 0 0 1 6 0v2" stroke-linecap="round"/>` },
+  { title: "Hygienic & Safe Environment", icon: `<path d="M12 3 5 6v5c0 5 3 8.5 7 10 4-1.5 7-5 7-10V6l-7-3Z" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/>` },
+  { title: "Personalized Consultation", icon: `<circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6" stroke-linecap="round"/><path d="M16 5l1.5 1.5L20 4" stroke-linecap="round" stroke-linejoin="round"/>` },
+  { title: "Natural-Looking Results", icon: `<path d="M3 13c2-4 6-6 9-6s7 2 9 6" stroke-linecap="round"/><circle cx="12" cy="13" r="2.2"/>` },
+  { title: "Affordable Premium Services", icon: `<circle cx="12" cy="12" r="9"/><path d="M9.5 9.2a2.5 2.5 0 0 1 4.6 1.3c0 2-3.6 1.8-3.6 4.2M12 17.5h.01" stroke-linecap="round"/>` },
+  { title: "Trusted by Clients Across Chennai", icon: `<path d="M12 21s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12Z" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.4"/>` },
+  { title: "Professional Aftercare Support", icon: `<path d="M20 12a8 8 0 1 1-3-6.2" stroke-linecap="round"/><path d="M20 4v5h-5" stroke-linecap="round" stroke-linejoin="round"/>` },
+];
+
+const testimonials = [
+  { name: "Priya R.", service: "Nano Brows", text: "My eyebrows look so natural, friends keep asking if I'm not wearing makeup. The studio is calm, clean, and the team explained every step." },
+  { name: "Anjali M.", service: "Lip Pigmentation", text: "Subtle, soft, exactly the tint I wanted. No more reapplying lipstick all day. Kavitha and her team were patient and incredibly professional." },
+  { name: "Divya S.", service: "Hydra Facial", text: "My skin has never felt this hydrated and smooth. The clinic feels premium from the moment you walk in — highly recommend to anyone in Chennai." },
+  { name: "Meera K.", service: "Eyelash Extensions", text: "Lightweight, natural-looking lashes that lasted for weeks. The attention to hygiene and detail really shows in the results." },
+  { name: "Lakshmi V.", service: "Hair Extensions", text: "Blended in perfectly with my own hair, nobody could tell the difference. Such a confident, friendly team to work with." },
+  { name: "Swathi N.", service: "IV Therapy", text: "Felt re-energised within a day. The whole experience was relaxing, professional, and exactly what I needed before a big event." },
+];
+
+/* =========================================================
+   RENDER: SERVICES
+========================================================= */
+const servicesGrid = document.getElementById('servicesGrid');
+services.forEach((s, i) => {
+  const card = document.createElement('div');
+  card.className = `service-card reveal reveal-delay-${(i % 4) + 1} rounded-2xl overflow-hidden flex flex-col`;
+  card.innerHTML = `
+    <div class="h-44 overflow-hidden">
+      <img src="${s.img}" alt="${s.title}" loading="lazy" class="w-full h-full object-cover">
+    </div>
+    <div class="p-6 flex flex-col flex-1">
+      <div class="service-icon-wrap w-11 h-11 rounded-xl bg-mist flex items-center justify-center mb-4 -mt-12 relative z-10 border border-line bg-white">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="${'#0F172A'}">${s.icon}</svg>
+      </div>
+      <h3 class="font-bold text-navy text-lg">${s.title}</h3>
+      ${s.duration ? `<span class="inline-block mt-2 text-[11px] font-semibold tracking-wide uppercase text-accent bg-blue-50 px-2.5 py-1 rounded-full w-fit">${s.duration}</span>` : ''}
+      <p class="text-sm text-gray-600 mt-3 leading-relaxed flex-1">${s.desc}</p>
+      <a href="${INSTAGRAM_URL}" target="_blank" rel="noopener noreferrer"
+         class="book-now-btn btn-primary mt-5 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full font-semibold text-sm focus-ring">
+        <span class="btn-label flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.85.06 1.17.06 1.96.24 2.43.4a4.92 4.92 0 0 1 1.77 1.15 4.92 4.92 0 0 1 1.15 1.77c.17.47.35 1.26.4 2.43.06 1.25.06 1.65.06 4.85s0 3.6-.06 4.85c-.06 1.17-.24 1.96-.4 2.43a4.92 4.92 0 0 1-1.15 1.77 4.92 4.92 0 0 1-1.77 1.15c-.47.17-1.26.35-2.43.4-1.25.06-1.65.06-4.85.06s-3.6 0-4.85-.06c-1.17-.06-1.96-.24-2.43-.4a4.92 4.92 0 0 1-1.77-1.15 4.92 4.92 0 0 1-1.15-1.77c-.17-.47-.35-1.26-.4-2.43C2.2 15.6 2.2 15.2 2.2 12s0-3.6.06-4.85c.06-1.17.24-1.96.4-2.43A4.92 4.92 0 0 1 3.81 3 4.92 4.92 0 0 1 5.58 1.84c.47-.17 1.26-.35 2.43-.4C9.26 1.38 9.66 1.38 12 1.38Z"/></svg>
+          Book Now
+        </span>
+        <svg class="btn-spinner h-3.5 w-3.5 animate-spin" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2.5" stroke-opacity="0.3"/><path d="M21 12a9 9 0 0 0-9-9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </a>
+    </div>
+  `;
+  servicesGrid.appendChild(card);
+});
+
+/* Footer services list */
+const footerServices = document.getElementById('footerServices');
+services.forEach(s => {
+  const li = document.createElement('li');
+  li.innerHTML = `<a href="#services" class="hover:text-white transition-colors">${s.title}</a>`;
+  footerServices.appendChild(li);
+});
+
+/* =========================================================
+   RENDER: FEATURES
+========================================================= */
+const featuresGrid = document.getElementById('featuresGrid');
+features.forEach((f, i) => {
+  const card = document.createElement('div');
+  card.className = `feature-card reveal reveal-delay-${(i % 4) + 1} rounded-2xl p-6 flex items-start gap-4`;
+  card.innerHTML = `
+    <div class="w-11 h-11 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor">${f.icon}</svg>
+    </div>
+    <p class="font-semibold text-navy pt-2 text-[15px] leading-snug">${f.title}</p>
+  `;
+  featuresGrid.appendChild(card);
+});
+
+/* =========================================================
+   RENDER: TESTIMONIALS (carousel)
+========================================================= */
+const track = document.getElementById('testimonialTrack');
+const dotsWrap = document.getElementById('testimonialDots');
+let slideIndex = 0;
+let slidesPerView = 3;
+
+function getSlidesPerView(){
+  if (window.innerWidth < 768) return 1;
+  if (window.innerWidth < 1024) return 2;
+  return 3;
+}
+
+testimonials.forEach((t) => {
+  const slide = document.createElement('div');
+  slide.className = 'testimonial-slide px-3';
+  slide.innerHTML = `
+    <div class="bg-white border border-line rounded-2xl p-7 h-full shadow-card flex flex-col">
+      <div class="text-accent text-base tracking-wide">★★★★★</div>
+      <p class="text-gray-600 text-sm leading-relaxed mt-4 flex-1">"${t.text}"</p>
+      <div class="mt-6 pt-5 border-t border-line">
+        <p class="font-semibold text-navy text-sm">${t.name}</p>
+        <p class="text-xs text-gray-500 mt-0.5">${t.service}</p>
+      </div>
+    </div>
+  `;
+  track.appendChild(slide);
+});
+
+function totalDots(){
+  return Math.max(1, testimonials.length - slidesPerView + 1);
+}
+
+function buildDots(){
+  dotsWrap.innerHTML = '';
+  const count = totalDots();
+  for (let i = 0; i < count; i++){
+    const d = document.createElement('div');
+    d.className = 'dot' + (i === slideIndex ? ' active' : '');
+    d.addEventListener('click', () => { slideIndex = i; updateCarousel(); });
+    dotsWrap.appendChild(d);
+  }
+}
+
+function updateCarousel(){
+  const slideWidthPercent = 100 / slidesPerView;
+  track.style.transform = `translateX(-${slideIndex * slideWidthPercent}%)`;
+  [...dotsWrap.children].forEach((d, i) => d.classList.toggle('active', i === slideIndex));
+}
+
+function refreshCarousel(){
+  slidesPerView = getSlidesPerView();
+  slideIndex = Math.min(slideIndex, totalDots() - 1);
+  buildDots();
+  updateCarousel();
+}
+
+refreshCarousel();
+window.addEventListener('resize', refreshCarousel);
+
+let autoSlide = setInterval(() => {
+  slideIndex = (slideIndex + 1) % totalDots();
+  updateCarousel();
+  [...dotsWrap.children].forEach((d, i) => d.classList.toggle('active', i === slideIndex));
+}, 4500);
+
+/* =========================================================
+   LOADER
+========================================================= */
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('loader').classList.add('hide');
+  }, 500);
+});
+// Safety fallback in case load event is delayed
+setTimeout(() => {
+  document.getElementById('loader').classList.add('hide');
+}, 2500);
+
+/* =========================================================
+   NAVBAR SCROLL STATE
+========================================================= */
+const navbar = document.getElementById('navbar');
+function onScroll(){
+  if (window.scrollY > 30) navbar.classList.add('scrolled');
+  else navbar.classList.remove('scrolled');
+}
+window.addEventListener('scroll', onScroll);
+onScroll();
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+const menuBtn = document.getElementById('menuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+const iconMenu = document.getElementById('iconMenu');
+const iconClose = document.getElementById('iconClose');
+let menuOpen = false;
+menuBtn.addEventListener('click', () => {
+  menuOpen = !menuOpen;
+  mobileMenu.classList.toggle('hidden', !menuOpen);
+  iconMenu.classList.toggle('hidden', menuOpen);
+  iconClose.classList.toggle('hidden', !menuOpen);
+});
+document.querySelectorAll('.mobile-link').forEach(link => {
+  link.addEventListener('click', () => {
+    menuOpen = false;
+    mobileMenu.classList.add('hidden');
+    iconMenu.classList.remove('hidden');
+    iconClose.classList.add('hidden');
+  });
+});
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+const revealEls = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting){
+      entry.target.classList.add('in');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+revealEls.forEach(el => observer.observe(el));
+
+/* =========================================================
+   TOAST
+========================================================= */
+let toastTimeout;
+function showToast(message){
+  const toast = document.getElementById('toast');
+  toast.textContent = message;
+  toast.classList.add('show');
+  clearTimeout(toastTimeout);
+  toastTimeout = setTimeout(() => toast.classList.remove('show'), 4000);
+}
+
+/* =========================================================
+   BOOK NOW BUTTON: loading effect + fallback handling
+========================================================= */
+document.querySelectorAll('.book-now-btn').forEach(btn => {
+  btn.addEventListener('click', function(e){
+    const href = this.getAttribute('href');
+    if (!href) return;
+
+    this.classList.add('btn-loading');
+
+    // Attempt to open Instagram; if blocked (popup blocker / no network), show fallback.
+    let didOpen = true;
+    try {
+      const win = window.open(href, '_blank', 'noopener,noreferrer');
+      if (!win) didOpen = false;
+    } catch (err){
+      didOpen = false;
+    }
+
+    e.preventDefault();
+
+    setTimeout(() => {
+      this.classList.remove('btn-loading');
+      if (!didOpen){
+        showToast(`Couldn't open Instagram. Please contact us at ${PHONE_DISPLAY}.`);
+      }
+    }, 700);
+  });
+});
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+const contactForm = document.getElementById('contactForm');
+const bookApptBtn = document.getElementById('bookApptBtn');
+contactForm.addEventListener('submit', function(e){
+  e.preventDefault();
+  if (!contactForm.checkValidity()){
+    contactForm.reportValidity();
+    return;
+  }
+  bookApptBtn.classList.add('btn-loading');
+  setTimeout(() => {
+    bookApptBtn.classList.remove('btn-loading');
+    let didOpen = true;
+    try {
+      const win = window.open(INSTAGRAM_URL, '_blank', 'noopener,noreferrer');
+      if (!win) didOpen = false;
+    } catch(err){ didOpen = false; }
+
+    if (didOpen){
+      showToast("Thanks! We've opened our Instagram — send us a DM to confirm your booking.");
+      contactForm.reset();
+    } else {
+      showToast(`Couldn't open Instagram. Please contact us at ${PHONE_DISPLAY}.`);
+    }
+  }, 700);
+});
+</script>
+</body>
+</html>
