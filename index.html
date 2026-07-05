@@ -23,19 +23,19 @@
     theme: {
       extend: {
         colors: {
-          navy: '#0F172A',
-          royal: '#1E3A8A',
-          accent: '#2563EB',
-          ink: '#111827',
-          mist: '#F8FAFC',
-          line: '#E5E7EB',
+          navy: '#0D0818',
+          royal: '#7B5EA7',
+          accent: '#C9A84C',
+          ink: '#1A1025',
+          mist: '#110D22',
+          line: 'rgba(200,162,200,0.25)',
         },
         fontFamily: {
           sans: ['Inter', 'sans-serif'],
         },
         boxShadow: {
-          card: '0 4px 24px -4px rgba(15, 23, 42, 0.08)',
-          cardHover: '0 16px 40px -8px rgba(15, 23, 42, 0.14)',
+          card: '0 4px 24px -4px rgba(13, 8, 24, 0.08)',
+          cardHover: '0 16px 40px -8px rgba(13, 8, 24, 0.14)',
         }
       }
     }
@@ -43,39 +43,40 @@
 </script>
 <style>
   :root{
-    --navy:#0F172A;
-    --royal:#1E3A8A;
-    --accent:#2563EB;
-    --ink:#111827;
-    --mist:#F8FAFC;
-    --line:#E5E7EB;
+    --navy:#0D0818;
+    --royal:#7B5EA7;
+    --accent:#C9A84C;
+    --ink:#1A1025;
+    --mist:#110D22;
+    --line:rgba(200,162,200,0.25);
+    color-scheme: dark;
   }
   *{ box-sizing:border-box; }
   html{ scroll-behavior:smooth; }
   body{
     font-family:'Inter', sans-serif;
-    color:var(--ink);
-    background:#FFFFFF;
+    color:#F9F5FF;
+    background:#0D0818;
     overflow-x:hidden;
   }
   ::selection{ background:var(--accent); color:#fff; }
 
   /* Scrollbar */
   ::-webkit-scrollbar{ width:8px; }
-  ::-webkit-scrollbar-track{ background:#F1F5F9; }
+  ::-webkit-scrollbar-track{ background:#110D22; }
   ::-webkit-scrollbar-thumb{ background:var(--royal); border-radius:8px; }
 
   /* Loading screen */
   #loader{
     position:fixed; inset:0; z-index:9999;
-    background:#FFFFFF;
+    background:#0D0818;
     display:flex; align-items:center; justify-content:center;
     transition:opacity 0.6s ease, visibility 0.6s ease;
   }
   #loader.hide{ opacity:0; visibility:hidden; }
   .loader-mark{
     font-weight:800; font-size:1.9rem; letter-spacing:-0.02em;
-    color:var(--navy);
+    color:#F9F5FF;
     display:flex; flex-direction:column; align-items:center; gap:14px;
   }
   .loader-ring{
@@ -108,13 +109,13 @@
     background:rgba(255,255,255,0);
   }
   #navbar.scrolled{
-    background:rgba(255,255,255,0.92);
+    background:rgba(13,8,24,0.92);
     backdrop-filter:blur(12px);
-    box-shadow:0 1px 0 var(--line), 0 8px 24px -12px rgba(15,23,42,0.12);
+    box-shadow:0 1px 0 var(--line), 0 8px 24px -12px rgba(13,8,24,0.12);
   }
   .nav-link{
     position:relative;
-    color:var(--ink);
+    color:#F9F5FF;
   }
   .nav-link::after{
     content:'';
@@ -126,25 +127,26 @@
 
   /* Buttons */
   .btn-primary{
-    background:var(--navy);
-    color:#fff;
-    transition:transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+    background:#C9A84C;
+    color:#0D0818;
+    transition:transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease, color 0.25s ease;
   }
   .btn-primary:hover{
     transform:translateY(-2px);
-    box-shadow:0 12px 28px -8px rgba(15,23,42,0.45);
-    background:var(--royal);
+    box-shadow:0 12px 28px -8px rgba(123,94,167,0.45);
+    background:#7B5EA7;
+    color:#FFFFFF;
   }
   .btn-secondary{
-    background:#fff;
-    color:var(--navy);
+    background:#110D22;
+    color:#F9F5FF;
     border:1.5px solid var(--line);
     transition:transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
   }
   .btn-secondary:hover{
     transform:translateY(-2px);
     border-color:var(--accent);
-    box-shadow:0 12px 28px -10px rgba(15,23,42,0.18);
+    box-shadow:0 12px 28px -10px rgba(201,168,76,0.18);
   }
   .btn-outline-light{
     background:rgba(255,255,255,0.08);
@@ -153,7 +155,8 @@
     transition:all 0.25s ease;
   }
   .btn-outline-light:hover{
-    background:#fff; color:var(--navy);
+    background:#C9A84C; color:#0D0818;
+    border-color:#C9A84C;
     transform:translateY(-2px);
   }
 
@@ -176,14 +179,15 @@
 
   /* Service cards */
   .service-card{
-    background:#fff;
+    background:rgba(255,255,255,0.06);
+    backdrop-filter:blur(10px);
     border:1px solid var(--line);
     transition:transform 0.35s cubic-bezier(.22,.61,.36,1), box-shadow 0.35s ease, border-color 0.35s ease;
   }
   .service-card:hover{
     transform:translateY(-8px);
-    box-shadow:0 20px 44px -12px rgba(15,23,42,0.16);
-    border-color:#CBD5E1;
+    box-shadow:0 20px 44px -12px rgba(13,8,24,0.16);
+    border-color:#C8A2C8;
   }
   .service-icon-wrap{
     transition:transform 0.35s ease, background-color 0.35s ease;
@@ -198,13 +202,14 @@
 
   /* Feature cards */
   .feature-card{
-    background:#fff;
+    background:rgba(255,255,255,0.06);
+    backdrop-filter:blur(10px);
     border:1px solid var(--line);
     transition:transform 0.3s ease, box-shadow 0.3s ease;
   }
   .feature-card:hover{
     transform:translateY(-6px);
-    box-shadow:0 16px 36px -10px rgba(15,23,42,0.12);
+    box-shadow:0 16px 36px -10px rgba(13,8,24,0.12);
   }
 
   /* Testimonial carousel */
@@ -234,7 +239,7 @@
 
   /* Sticky mobile bar */
   #stickyBar{
-    box-shadow:0 -8px 24px -8px rgba(15,23,42,0.18);
+    box-shadow:0 -8px 24px -8px rgba(13,8,24,0.18);
   }
 
   /* Section badge / eyebrow */
@@ -247,10 +252,21 @@
   }
 
   /* Input focus */
+  .form-input, .form-select, .form-textarea{
+    background:rgba(255,255,255,0.05);
+    color:#F9F5FF;
+  }
+  .form-input::placeholder, .form-textarea::placeholder{
+    color:rgba(249,245,255,0.4);
+  }
+  .form-select option{
+    background:#110D22;
+    color:#F9F5FF;
+  }
   .form-input:focus, .form-select:focus, .form-textarea:focus{
     outline:none;
     border-color:var(--accent);
-    box-shadow:0 0 0 3px rgba(37,99,235,0.12);
+    box-shadow:0 0 0 3px rgba(201,168,76,0.12);
   }
 
   /* Toast */
@@ -259,7 +275,7 @@
     background:var(--navy); color:#fff;
     padding:14px 22px; border-radius:12px;
     font-size:0.9rem; font-weight:500;
-    box-shadow:0 12px 32px -8px rgba(15,23,42,0.4);
+    box-shadow:0 12px 32px -8px rgba(13,8,24,0.4);
     opacity:0; visibility:hidden;
     transition:all 0.35s ease;
     z-index:200; max-width:90vw; text-align:center;
@@ -288,7 +304,7 @@
   }
 </style>
 </head>
-<body class="antialiased bg-white">
+<body class="antialiased">
 
 <!-- ============ LOADING SCREEN ============ -->
 <div id="loader" aria-hidden="true">
@@ -307,8 +323,8 @@
     <a href="#home" class="flex items-center gap-2.5">
       <img src="logo.jpeg" alt="Nano Brows Chennai Logo" class="h-11 w-11 object-contain" />
       <span class="hidden sm:flex flex-col leading-none">
-        <span class="text-base font-extrabold tracking-tight text-navy">NANO BROWS</span>
-        <span class="text-[10px] font-medium text-gray-500 tracking-wide">CHENNAI</span>
+        <span class="text-base font-extrabold tracking-tight text-[#F9F5FF]">NANO BROWS</span>
+        <span class="text-[10px] font-medium text-[#C8A2C8] tracking-wide">CHENNAI</span>
       </span>
     </a>
     <div class="hidden md:flex items-center gap-9 text-sm font-medium">
@@ -322,7 +338,7 @@
     <a href="#contact" class="hidden md:inline-flex btn-primary px-5 py-2.5 rounded-full text-sm font-semibold focus-ring">
       Book Appointment
     </a>
-    <button id="menuBtn" aria-label="Open menu" class="md:hidden text-navy focus-ring rounded">
+    <button id="menuBtn" aria-label="Open menu" class="md:hidden text-[#F9F5FF] focus-ring rounded">
       <svg id="iconMenu" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
       </svg>
@@ -332,7 +348,7 @@
     </button>
   </div>
   <!-- Mobile menu -->
-  <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-line mt-3">
+  <div id="mobileMenu" class="md:hidden hidden bg-[rgba(255,255,255,0.06)] backdrop-blur-md border-t border-line mt-3">
     <div class="flex flex-col px-6 py-4 gap-4 text-sm font-medium">
       <a href="#home" class="mobile-link">Home</a>
       <a href="#about" class="mobile-link">About</a>
@@ -346,20 +362,20 @@
 </nav>
 
 <!-- ============ HERO ============ -->
-<section id="home" class="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden bg-white">
+<section id="home" class="relative min-h-screen flex items-center pt-28 pb-16 overflow-hidden bg-navy">
   <!-- Floating shapes -->
-  <div class="floating-shape" style="top:12%; left:6%; width:90px; height:90px; background:rgba(37,99,235,0.08);"></div>
-  <div class="floating-shape" style="top:65%; left:14%; width:50px; height:50px; background:rgba(30,58,138,0.10); animation-delay:1.2s;"></div>
-  <div class="floating-shape" style="top:22%; right:8%; width:130px; height:130px; background:rgba(37,99,235,0.06); animation-delay:0.6s;"></div>
-  <div class="floating-shape" style="top:74%; right:16%; width:64px; height:64px; background:rgba(15,23,42,0.06); animation-delay:1.8s;"></div>
+  <div class="floating-shape" style="top:12%; left:6%; width:90px; height:90px; background:rgba(201,168,76,0.08);"></div>
+  <div class="floating-shape" style="top:65%; left:14%; width:50px; height:50px; background:rgba(123,94,167,0.10); animation-delay:1.2s;"></div>
+  <div class="floating-shape" style="top:22%; right:8%; width:130px; height:130px; background:rgba(201,168,76,0.06); animation-delay:0.6s;"></div>
+  <div class="floating-shape" style="top:74%; right:16%; width:64px; height:64px; background:rgba(13,8,24,0.06); animation-delay:1.8s;"></div>
 
   <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative z-10 w-full">
     <div class="reveal in">
       <span class="eyebrow">Premium Beauty Studio · Chennai</span>
-      <h1 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.08] text-navy">
+      <h1 class="mt-5 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.08] text-[#F9F5FF]">
         Enhance Your Natural Beauty With Confidence
       </h1>
-      <p class="mt-6 text-lg text-gray-600 max-w-lg leading-relaxed">
+      <p class="mt-6 text-lg text-[#C8A2C8] max-w-lg leading-relaxed">
         Premium Beauty & Aesthetic Treatments In Chennai
       </p>
       <div class="mt-9 flex flex-wrap gap-4">
@@ -380,12 +396,12 @@
           WhatsApp
         </a>
       </div>
-      <div class="mt-10 flex items-center gap-8 text-gray-500 text-sm">
-        <div><span class="block text-2xl font-extrabold text-navy">2+ Yrs</span>Results That Last</div>
+      <div class="mt-10 flex items-center gap-8 text-[#C8A2C8] text-sm">
+        <div><span class="block text-2xl font-extrabold text-[#F9F5FF]">2+ Yrs</span>Results That Last</div>
         <div class="w-px h-9 bg-line"></div>
-        <div><span class="block text-2xl font-extrabold text-navy">10+</span>Premium Treatments</div>
+        <div><span class="block text-2xl font-extrabold text-[#F9F5FF]">10+</span>Premium Treatments</div>
         <div class="w-px h-9 bg-line"></div>
-        <div><span class="block text-2xl font-extrabold text-navy">Chennai</span>Trusted Studio</div>
+        <div><span class="block text-2xl font-extrabold text-[#F9F5FF]">Chennai</span>Trusted Studio</div>
       </div>
     </div>
 
@@ -395,11 +411,11 @@
              alt="Beauty Specialist" loading="eager"
              class="w-full h-full object-cover">
       </div>
-      <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-card px-6 py-4 hidden sm:flex items-center gap-3 border border-line">
+      <div class="absolute -bottom-6 -left-6 bg-[rgba(255,255,255,0.08)] backdrop-blur-md rounded-2xl shadow-card px-6 py-4 hidden sm:flex items-center gap-3 border border-line">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-9 w-9 text-accent" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         <div>
-          <p class="text-sm font-semibold text-navy">Certified Specialists</p>
-          <p class="text-xs text-gray-500">Hygienic & Safe Process</p>
+          <p class="text-sm font-semibold text-[#F9F5FF]">Certified Specialists</p>
+          <p class="text-xs text-[#C8A2C8]">Hygienic & Safe Process</p>
         </div>
       </div>
     </div>
@@ -407,7 +423,7 @@
 </section>
 
 <!-- ============ ABOUT ============ -->
-<section id="about" class="py-24 lg:py-32 bg-white">
+<section id="about" class="py-24 lg:py-32 bg-navy">
   <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
     <div class="reveal order-2 lg:order-1">
       <div class="relative rounded-3xl overflow-hidden shadow-card aspect-[4/5] max-w-md">
@@ -418,26 +434,26 @@
     </div>
     <div class="reveal reveal-delay-1 order-1 lg:order-2">
       <span class="eyebrow">About Us</span>
-      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-navy">About Nano Brows Chennai</h2>
-      <p class="mt-6 text-gray-600 leading-relaxed text-base">
+      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-[#F9F5FF]">About Nano Brows Chennai</h2>
+      <p class="mt-6 text-[#C8A2C8] leading-relaxed text-base">
         At Nano Brows Chennai, we believe beauty is an expression of confidence. Our goal is to enhance your natural features using advanced beauty techniques while maintaining elegance and authenticity. Every treatment is personalized to suit individual needs, ensuring comfort, safety, and exceptional results. We use premium products, advanced technology, and professional expertise to deliver a luxurious beauty experience.
       </p>
       <div class="mt-8 grid grid-cols-2 gap-5">
         <div class="flex items-start gap-3">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span class="text-sm text-gray-700 font-medium">Certified Professionals</span>
+          <span class="text-sm text-[#F9F5FF] font-medium">Certified Professionals</span>
         </div>
         <div class="flex items-start gap-3">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span class="text-sm text-gray-700 font-medium">Premium Products</span>
+          <span class="text-sm text-[#F9F5FF] font-medium">Premium Products</span>
         </div>
         <div class="flex items-start gap-3">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span class="text-sm text-gray-700 font-medium">Hygienic Environment</span>
+          <span class="text-sm text-[#F9F5FF] font-medium">Hygienic Environment</span>
         </div>
         <div class="flex items-start gap-3">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          <span class="text-sm text-gray-700 font-medium">Personalized Care</span>
+          <span class="text-sm text-[#F9F5FF] font-medium">Personalized Care</span>
         </div>
       </div>
     </div>
@@ -449,8 +465,8 @@
   <div class="max-w-7xl mx-auto px-6">
     <div class="text-center max-w-2xl mx-auto reveal">
       <span class="eyebrow">Our Services</span>
-      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-navy">Premium Treatments, Designed Around You</h2>
-      <p class="mt-4 text-gray-600">A curated range of beauty and aesthetic treatments delivered with precision, hygiene, and care.</p>
+      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight" style="color:#F9F5FF;">Premium Treatments, Designed Around You</h2>
+      <p class="mt-4" style="color:#C8A2C8;">A curated range of beauty and aesthetic treatments delivered with precision, hygiene, and care.</p>
     </div>
 
     <div id="servicesGrid" class="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-7"></div>
@@ -458,11 +474,11 @@
 </section>
 
 <!-- ============ WHY CHOOSE US ============ -->
-<section id="why-us" class="py-24 lg:py-32 bg-white">
+<section id="why-us" class="py-24 lg:py-32 bg-navy">
   <div class="max-w-7xl mx-auto px-6">
     <div class="text-center max-w-2xl mx-auto reveal">
       <span class="eyebrow">Why Choose Us</span>
-      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-navy">Trusted Expertise, Premium Care</h2>
+      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-[#F9F5FF]">Trusted Expertise, Premium Care</h2>
     </div>
     <div id="featuresGrid" class="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
   </div>
@@ -471,7 +487,7 @@
 <!-- ============ OWNER ============ -->
 <section class="py-24 lg:py-32 bg-mist border-t border-y border-line">
   <div class="max-w-6xl mx-auto px-6">
-    <div class="reveal grid md:grid-cols-[280px_1fr] gap-12 items-center bg-white rounded-3xl border border-line shadow-card p-8 md:p-12">
+    <div class="reveal grid md:grid-cols-[280px_1fr] gap-12 items-center bg-[rgba(255,255,255,0.08)] backdrop-blur-md rounded-3xl border border-line shadow-card p-8 md:p-12">
       <div class="relative mx-auto">
         <div class="rounded-2xl overflow-hidden shadow-card w-56 h-56 md:w-64 md:h-64">
           <img src="owner-kavitha.jpeg"
@@ -484,9 +500,9 @@
       </div>
       <div>
         <span class="eyebrow">Meet The Founder</span>
-        <h3 class="mt-3 text-2xl sm:text-3xl font-extrabold text-navy tracking-tight">Kavitha P.</h3>
+        <h3 class="mt-3 text-2xl sm:text-3xl font-extrabold text-[#F9F5FF] tracking-tight">Kavitha P.</h3>
         <p class="mt-1 text-accent font-semibold text-sm">Founder & Beauty Specialist</p>
-        <p class="mt-5 text-gray-600 leading-relaxed">
+        <p class="mt-5 text-[#C8A2C8] leading-relaxed">
           Kavitha P. is passionate about helping every client look and feel their best. With professional expertise, personalized care, and attention to detail, she delivers exceptional beauty treatments in a safe, hygienic, and welcoming environment.
         </p>
       </div>
@@ -495,11 +511,11 @@
 </section>
 
 <!-- ============ TESTIMONIALS ============ -->
-<section id="testimonials" class="py-24 lg:py-32 bg-white overflow-hidden">
+<section id="testimonials" class="py-24 lg:py-32 bg-navy overflow-hidden">
   <div class="max-w-7xl mx-auto px-6">
     <div class="text-center max-w-2xl mx-auto reveal">
       <span class="eyebrow">Testimonials</span>
-      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-navy">What Our Clients Say</h2>
+      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-[#F9F5FF]">What Our Clients Say</h2>
     </div>
   </div>
 
@@ -517,8 +533,8 @@
     <div class="text-center max-w-2xl mx-auto reveal">
       <img src="logo.jpeg" alt="Nano Brows Chennai Logo" class="h-20 w-20 object-contain mx-auto mb-6" />
       <span class="eyebrow">@nanobrows_chennai</span>
-      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-navy">Follow Our Beauty Journey</h2>
-      <p class="mt-4 text-gray-600">Stay updated with our latest transformations, offers, and behind-the-scenes moments from the studio.</p>
+      <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight" style="color:#F9F5FF;">Follow Our Beauty Journey</h2>
+      <p class="mt-4" style="color:#C8A2C8;">Stay updated with our latest transformations, offers, and behind-the-scenes moments from the studio.</p>
     </div>
 
     <div class="text-center mt-10">
@@ -533,12 +549,12 @@
 
 <!-- ============ CONTACT ============ -->
 <section id="contact" class="py-24 lg:py-32 bg-navy text-white relative overflow-hidden">
-  <div class="floating-shape" style="top:10%; left:4%; width:120px; height:120px; background:rgba(37,99,235,0.18);"></div>
-  <div class="floating-shape" style="bottom:8%; right:8%; width:160px; height:160px; background:rgba(30,58,138,0.25); animation-delay:1s;"></div>
+  <div class="floating-shape" style="top:10%; left:4%; width:120px; height:120px; background:rgba(201,168,76,0.18);"></div>
+  <div class="floating-shape" style="bottom:8%; right:8%; width:160px; height:160px; background:rgba(123,94,167,0.25); animation-delay:1s;"></div>
 
   <div class="max-w-7xl mx-auto px-6 relative z-10">
     <div class="text-center max-w-2xl mx-auto reveal">
-      <span class="eyebrow" style="color:#93C5FD;">Get In Touch</span>
+      <span class="eyebrow" style="color:#E8D5A3;">Get In Touch</span>
       <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold tracking-tight text-white">Book Your Beauty Transformation Today</h2>
     </div>
 
@@ -599,24 +615,24 @@
       </div>
 
       <!-- Form -->
-      <div class="reveal reveal-delay-1 bg-white rounded-3xl p-7 sm:p-9 text-ink shadow-card">
-        <h3 class="text-xl font-bold text-navy">Send Us A Message</h3>
-        <p class="text-sm text-gray-500 mt-1 mb-6">We'll get back to you to confirm your appointment.</p>
+      <div class="reveal reveal-delay-1 bg-[rgba(255,255,255,0.08)] backdrop-blur-md rounded-3xl p-7 sm:p-9 text-[#F9F5FF] shadow-card">
+        <h3 class="text-xl font-bold text-[#F9F5FF]">Send Us A Message</h3>
+        <p class="text-sm text-[#C8A2C8] mt-1 mb-6">We'll get back to you to confirm your appointment.</p>
         <form id="contactForm" class="space-y-4" novalidate>
           <div>
-            <label for="fname" class="block text-sm font-medium text-gray-700 mb-1.5">Name</label>
+            <label for="fname" class="block text-sm font-medium text-[#F9F5FF] mb-1.5">Name</label>
             <input id="fname" name="name" type="text" required placeholder="Your full name"
                    class="form-input w-full rounded-xl border border-line px-4 py-3 text-sm transition-all" />
           </div>
           <div>
-            <label for="fphone" class="block text-sm font-medium text-gray-700 mb-1.5">Phone Number</label>
+            <label for="fphone" class="block text-sm font-medium text-[#F9F5FF] mb-1.5">Phone Number</label>
             <input id="fphone" name="phone" type="tel" required placeholder="+91 XXXXX XXXXX"
                    class="form-input w-full rounded-xl border border-line px-4 py-3 text-sm transition-all" />
           </div>
           <div>
-            <label for="fservice" class="block text-sm font-medium text-gray-700 mb-1.5">Service</label>
+            <label for="fservice" class="block text-sm font-medium text-[#F9F5FF] mb-1.5">Service</label>
             <select id="fservice" name="service" required
-                    class="form-select w-full rounded-xl border border-line px-4 py-3 text-sm transition-all bg-white">
+                    class="form-select w-full rounded-xl border border-line px-4 py-3 text-sm transition-all bg-[#110D22]">
               <option value="" disabled selected>Select a service</option>
               <option>Nano Brows</option>
               <option>Lip Pigmentation</option>
@@ -631,7 +647,7 @@
             </select>
           </div>
           <div>
-            <label for="fmessage" class="block text-sm font-medium text-gray-700 mb-1.5">Message</label>
+            <label for="fmessage" class="block text-sm font-medium text-[#F9F5FF] mb-1.5">Message</label>
             <textarea id="fmessage" name="message" rows="3" placeholder="Tell us a bit about what you're looking for"
                       class="form-textarea w-full rounded-xl border border-line px-4 py-3 text-sm transition-all resize-none"></textarea>
           </div>
@@ -639,7 +655,7 @@
             <span class="btn-label">Book Appointment</span>
             <svg class="btn-spinner h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2.5" stroke-opacity="0.3"/><path d="M21 12a9 9 0 0 0-9-9" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
           </button>
-          <p class="text-xs text-gray-400 text-center pt-1">Submitting this form will direct you to our Instagram to confirm your booking.</p>
+          <p class="text-xs text-[#C8A2C8]/70 text-center pt-1">Submitting this form will direct you to our Instagram to confirm your booking.</p>
         </form>
       </div>
     </div>
@@ -697,16 +713,16 @@
 </footer>
 
 <!-- ============ STICKY MOBILE BAR ============ -->
-<div id="stickyBar" class="fixed bottom-0 left-0 w-full bg-white border-t border-line z-50">
-  <a href="tel:+919791079574" class="flex-1 flex flex-col items-center justify-center gap-0.5 py-2.5 text-navy">
+<div id="stickyBar" class="fixed bottom-0 left-0 w-full bg-[rgba(255,255,255,0.06)] backdrop-blur-md border-t border-line z-50">
+  <a href="tel:+919791079574" class="flex-1 flex flex-col items-center justify-center gap-0.5 py-2.5 text-[#F9F5FF]">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.4 21 3 13.6 3 4.5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.02l-2.2 2.2Z"/></svg>
     <span class="text-[11px] font-medium">Call</span>
   </a>
-  <a href="https://wa.me/919791079574" target="_blank" rel="noopener noreferrer" class="flex-1 flex flex-col items-center justify-center gap-0.5 py-2.5 text-navy border-l border-r border-line">
+  <a href="https://wa.me/919791079574" target="_blank" rel="noopener noreferrer" class="flex-1 flex flex-col items-center justify-center gap-0.5 py-2.5 text-[#F9F5FF] border-l border-r border-line">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.47 3.45 1.35 4.93L2 22l5.27-1.38a9.9 9.9 0 0 0 4.77 1.22h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2Z"/></svg>
     <span class="text-[11px] font-medium">WhatsApp</span>
   </a>
-  <a href="https://instagram.com/nanobrows_chennai" target="_blank" rel="noopener noreferrer" class="flex-1 flex flex-col items-center justify-center gap-0.5 py-2.5 text-navy">
+  <a href="https://instagram.com/nanobrows_chennai" target="_blank" rel="noopener noreferrer" class="flex-1 flex flex-col items-center justify-center gap-0.5 py-2.5 text-[#F9F5FF]">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.85.06 1.17.06 1.96.24 2.43.4a4.92 4.92 0 0 1 1.77 1.15 4.92 4.92 0 0 1 1.15 1.77c.17.47.35 1.26.4 2.43.06 1.25.06 1.65.06 4.85s0 3.6-.06 4.85c-.06 1.17-.24 1.96-.4 2.43a4.92 4.92 0 0 1-1.15 1.77 4.92 4.92 0 0 1-1.77 1.15c-.47.17-1.26.35-2.43.4-1.25.06-1.65.06-4.85.06s-3.6 0-4.85-.06c-1.17-.06-1.96-.24-2.43-.4a4.92 4.92 0 0 1-1.77-1.15 4.92 4.92 0 0 1-1.15-1.77c-.17-.47-.35-1.26-.4-2.43C2.2 15.6 2.2 15.2 2.2 12s0-3.6.06-4.85c.06-1.17.24-1.96.4-2.43A4.92 4.92 0 0 1 3.81 3 4.92 4.92 0 0 1 5.58 1.84c.47-.17 1.26-.35 2.43-.4C9.26 1.38 9.66 1.38 12 1.38Z"/></svg>
     <span class="text-[11px] font-medium">Instagram</span>
   </a>
@@ -825,12 +841,12 @@ services.forEach((s, i) => {
       <img src="${s.img}" alt="${s.title}" loading="lazy" class="w-full h-full object-cover">
     </div>
     <div class="p-6 flex flex-col flex-1">
-      <div class="service-icon-wrap w-11 h-11 rounded-xl bg-mist flex items-center justify-center mb-4 -mt-12 relative z-10 border border-line bg-white">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="${'#0F172A'}">${s.icon}</svg>
+      <div class="service-icon-wrap w-11 h-11 rounded-xl flex items-center justify-center mb-4 -mt-12 relative z-10 border border-line bg-[rgba(255,255,255,0.10)]">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="${'#C9A84C'}">${s.icon}</svg>
       </div>
-      <h3 class="font-bold text-navy text-lg">${s.title}</h3>
-      ${s.duration ? `<span class="inline-block mt-2 text-[11px] font-semibold tracking-wide uppercase text-accent bg-blue-50 px-2.5 py-1 rounded-full w-fit">${s.duration}</span>` : ''}
-      <p class="text-sm text-gray-600 mt-3 leading-relaxed flex-1">${s.desc}</p>
+      <h3 class="font-bold text-[#F9F5FF] text-lg">${s.title}</h3>
+      ${s.duration ? `<span class="inline-block mt-2 text-[11px] font-semibold tracking-wide uppercase text-accent bg-[rgba(232,213,163,0.18)] px-2.5 py-1 rounded-full w-fit">${s.duration}</span>` : ''}
+      <p class="text-sm text-[#C8A2C8] mt-3 leading-relaxed flex-1">${s.desc}</p>
       <a href="${INSTAGRAM_URL}" target="_blank" rel="noopener noreferrer"
          class="book-now-btn btn-primary mt-5 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full font-semibold text-sm focus-ring">
         <span class="btn-label flex items-center gap-2">
@@ -860,10 +876,10 @@ features.forEach((f, i) => {
   const card = document.createElement('div');
   card.className = `feature-card reveal reveal-delay-${(i % 4) + 1} rounded-2xl p-6 flex items-start gap-4`;
   card.innerHTML = `
-    <div class="w-11 h-11 rounded-xl bg-blue-50 flex items-center justify-center flex-shrink-0">
+    <div class="w-11 h-11 rounded-xl bg-[rgba(232,213,163,0.18)] flex items-center justify-center flex-shrink-0">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-accent" viewBox="0 0 24 24" fill="none" stroke="currentColor">${f.icon}</svg>
     </div>
-    <p class="font-semibold text-navy pt-2 text-[15px] leading-snug">${f.title}</p>
+    <p class="font-semibold text-[#F9F5FF] pt-2 text-[15px] leading-snug">${f.title}</p>
   `;
   featuresGrid.appendChild(card);
 });
@@ -886,12 +902,12 @@ testimonials.forEach((t) => {
   const slide = document.createElement('div');
   slide.className = 'testimonial-slide px-3';
   slide.innerHTML = `
-    <div class="bg-white border border-line rounded-2xl p-7 h-full shadow-card flex flex-col">
+    <div class="bg-[rgba(255,255,255,0.06)] backdrop-blur-md border border-line rounded-2xl p-7 h-full shadow-card flex flex-col">
       <div class="text-accent text-base tracking-wide">★★★★★</div>
-      <p class="text-gray-600 text-sm leading-relaxed mt-4 flex-1">"${t.text}"</p>
+      <p class="text-[#C8A2C8] text-sm leading-relaxed mt-4 flex-1">"${t.text}"</p>
       <div class="mt-6 pt-5 border-t border-line">
-        <p class="font-semibold text-navy text-sm">${t.name}</p>
-        <p class="text-xs text-gray-500 mt-0.5">${t.service}</p>
+        <p class="font-semibold text-[#F9F5FF] text-sm">${t.name}</p>
+        <p class="text-xs text-[#C8A2C8] mt-0.5">${t.service}</p>
       </div>
     </div>
   `;
